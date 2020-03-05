@@ -23,8 +23,7 @@ int main(int argc, char** argv)
         if (argv_string == "-h") {
             usage(argv[0]);
         }
-
-        if (argv_string == "--url") {
+        if (argv_string.compare("--url") == 0) {
             if (argc > i + 1) {
                 connection_url = argv[i+1];
                 remove_argv(argc, argv, i);
