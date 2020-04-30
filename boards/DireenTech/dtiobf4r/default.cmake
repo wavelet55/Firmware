@@ -1,8 +1,8 @@
 
 px4_add_board(
 	PLATFORM nuttx
-	VENDOR omnibus
-	MODEL f4sd
+	VENDOR DireenTech
+	MODEL dtiobf4r
 	TOOLCHAIN arm-none-eabi
 	ARCHITECTURE cortex-m4
 	ROMFSROOT px4fmu_common
@@ -21,16 +21,16 @@ px4_add_board(
 		gps
 		#heater
 		#imu # all available imu drivers
-		imu/mpu6000
+		#imu/mpu6000
 		imu/invensense/icm20602
 		#irlock
 		#lights/blinkm
-		lights/rgbled
+		#lights/rgbled
 		#magnetometer # all available magnetometer drivers
-		magnetometer/hmc5883
+		magnetometer/lis3mdl
 		#mkblctrl
-		optical_flow/px4flow
-		osd
+		#optical_flow/px4flow
+		#osd
 		#pca9685
 		#pwm_input
 		#pwm_out_sim
@@ -97,7 +97,7 @@ px4_add_board(
 		work_queue
 	EXAMPLES
 		#fixedwing_control # Tutorial code from https://px4.io/dev/example_fixedwing_control
-		#hello
+		hello
 		#hwtest # Hardware test
 		#matlab_csv_serial
 		#px4_mavlink_debug # Tutorial code from http://dev.px4.io/en/debug/debug_values.html

@@ -34,7 +34,7 @@
 /**
  * @file board_config.h
  *
- * omnibusf4sd internal definitions
+ * dtiobf4r internal definitions
  */
 
 #pragma once
@@ -52,7 +52,7 @@
  ****************************************************************************************************/
 /* Configuration ************************************************************************************/
 
-/* omnibusf4sd GPIOs ***********************************************************************************/
+/* direentech-obf4r GPIOs ***********************************************************************************/
 /* LEDs */
 // power - green
 // LED1 - PB5 - blue
@@ -109,7 +109,7 @@
 //#define GPIO_GPIO5_OUTPUT            _MK_GPIO_OUTPUT(GPIO_TIM1_CH1OUT)
 
 /*----------------------------------------------------------*/
-/*         OMNIBUSF4SD SPI chip selects and DRDY            */
+/*     DireenTech dtiobf4r SPI chip selects and DRDY        */
 /*----------------------------------------------------------*/
 
 /* SPI chip selects */
@@ -127,7 +127,7 @@
  * SD Card: PB12
  *
  */
-#define GPIO_SPI_CS_SDCARD         (GPIO_OUTPUT|GPIO_PUSHPULL|GPIO_SPEED_50MHz|GPIO_OUTPUT_SET|GPIO_PORTB|GPIO_PIN12)
+//#define GPIO_SPI_CS_SDCARD         (GPIO_OUTPUT|GPIO_PUSHPULL|GPIO_SPEED_50MHz|GPIO_OUTPUT_SET|GPIO_PORTB|GPIO_PIN12)
 
 /*
  * Define the Chip Selects for SPI3
@@ -138,7 +138,9 @@
  */
 
 #define GPIO_SPI3_CS_BARO          (GPIO_OUTPUT|GPIO_PUSHPULL|GPIO_SPEED_2MHz|GPIO_OUTPUT_SET|GPIO_PORTB|GPIO_PIN3)
-#define GPIO_SPI3_CS_OSD           (GPIO_OUTPUT|GPIO_PUSHPULL|GPIO_SPEED_2MHz|GPIO_OUTPUT_SET|GPIO_PORTA|GPIO_PIN15)
+#define GPIO_SPI3_CS_MAG           (GPIO_OUTPUT|GPIO_PUSHPULL|GPIO_SPEED_2MHz|GPIO_OUTPUT_SET|GPIO_PORTC|GPIO_PIN14)
+#define GPIO_SPI3_CS_EEPROM        (GPIO_OUTPUT|GPIO_PUSHPULL|GPIO_SPEED_2MHz|GPIO_OUTPUT_SET|GPIO_PORTC|GPIO_PIN15)
+//#define GPIO_SPI3_CS_OSD           (GPIO_OUTPUT|GPIO_PUSHPULL|GPIO_SPEED_2MHz|GPIO_OUTPUT_SET|GPIO_PORTA|GPIO_PIN15)
 
 /*
  *  Define the ability to shut off off the sensor signals
@@ -159,7 +161,7 @@
 #define GPIO_SPI2_MISO_OFF           _PIN_OFF(GPIO_SPI2_MISO)
 #define GPIO_SPI2_MOSI_OFF           _PIN_OFF(GPIO_SPI2_MOSI)
 /* SPI 2 CS's  off */
-#define GPIO_SPI2_CS_SDCARD_OFF         _PIN_OFF(GPIO_SPI_CS_SDCARD)
+//#define GPIO_SPI2_CS_SDCARD_OFF         _PIN_OFF(GPIO_SPI_CS_SDCARD)
 
 /* SPI 3 bus off */
 #define GPIO_SPI3_SCK_OFF            _PIN_OFF(GPIO_SPI3_SCK)
@@ -167,7 +169,9 @@
 #define GPIO_SPI3_MOSI_OFF           _PIN_OFF(GPIO_SPI3_MOSI)
 /* SPI 3 CS's  off */
 #define GPIO_SPI3_CS_BARO_OFF        _PIN_OFF(GPIO_SPI3_CS_BARO)
-#define GPIO_SPI3_CS_OSD_OFF        _PIN_OFF(GPIO_SPI3_CS_OSD)
+#define GPIO_SPI3_CS_MAG_OFF         _PIN_OFF(GPIO_SPI3_CS_MAG)
+#define GPIO_SPI3_CS_EEPROM_OFF      _PIN_OFF(GPIO_SPI3_CS_EEPROM)
+//#define GPIO_SPI3_CS_OSD_OFF         _PIN_OFF(GPIO_SPI3_CS_OSD)
 
 // One device per bus
 #define PX4_SPI_BUS_SENSORS         1
@@ -175,7 +179,7 @@
 #define PX4_SPIDEV_ICM_20602        1
 #define PX4_SPIDEV_BARO_BUS         3
 #define PX4_SPIDEV_BARO             1
-#define PX4_SPIDEV_OSD              2
+//#define PX4_SPIDEV_OSD              2
 
 /* USB OTG FS
  *
@@ -184,11 +188,13 @@
 #define GPIO_OTGFS_VBUS		(GPIO_INPUT|GPIO_FLOAT|GPIO_SPEED_100MHz|GPIO_OPENDRAIN|GPIO_PORTC|GPIO_PIN5)
 
 /*----------------------------------------------------------*/
-/*        End OMNIBUSF4SD SPI chip selects and DRDY         */
+/*    End DireenTech dtiobf4r SPI chip selects and DRDY     */
 /*----------------------------------------------------------*/
 
 #define PX4_SPI_BUS_BARO         3
-#define PX4_SPI_BUS_OSD			 3
+#define PX4_SPI_BUS_MAG			 3
+#define PX4_SPI_BUS_EEPROM		 3
+//#define PX4_SPI_BUS_OSD			 3
 
 #define PX4_I2C_BUS_EXPANSION    2
 #define PX4_I2C_BUS_LED          PX4_I2C_BUS_EXPANSION

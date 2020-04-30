@@ -1,6 +1,9 @@
 /************************************************************************************
- * nuttx-configs/omnibus-f4sd/include/board.h
+ * nuttx-configs/direentech-obf4r/include/board.h
  * include/arch/board/board.h
+ *
+ * Harry Direen, PhD
+ * hdireen@direentech.com
  *
  *   Copyright (C) 2012 Gregory Nutt. All rights reserved.
  *   Author: Gregory Nutt <gnutt@nuttx.org>
@@ -37,8 +40,8 @@
  *
  ************************************************************************************/
 
-#ifndef __CONFIG_OMNIBUSF4SD_INCLUDE_BOARD_H
-#define __CONFIG_OMNIBUSF4SD_INCLUDE_BOARD_H
+#ifndef __CONFIG_DIREENTECHOBF4R_INCLUDE_BOARD_H
+#define __CONFIG_DIREENTECHOBF4R_INCLUDE_BOARD_H
 
 /************************************************************************************
  * Included Files
@@ -59,7 +62,7 @@
  ************************************************************************************/
 
 /* Clocking *************************************************************************/
-/* The omnibusf4sd board features a single 8MHz crystal.  Space is provided
+/* The direentech-obf4r board features a single 8MHz crystal.  Space is provided
  * for a 32kHz RTC backup crystal, but it is not stuffed.
  *
  * This is the canonical configuration:
@@ -236,7 +239,7 @@
 #define BOARD_LED2_BIT    (1 << BOARD_LED2)
 
 /* If CONFIG_ARCH_LEDs is defined, then NuttX will control the 2 LEDs on board the
- * omnibusf4sd.  The following definitions describe how NuttX controls the LEDs:
+ * direentech-obf4r.  The following definitions describe how NuttX controls the LEDs:
  */
 
 #define LED_STARTED       0  /* LED1 */
@@ -398,4 +401,4 @@ EXTERN void stm32_setleds(uint8_t ledset);
 #endif
 
 #endif /* __ASSEMBLY__ */
-#endif  /* __CONFIG_OMNIBUSF4SD_INCLUDE_BOARD_H */
+#endif  /* __CONFIG_DIREENTECHOBF4R_INCLUDE_BOARD_H */

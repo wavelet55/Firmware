@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# OmnibusF4SD specific board MAVLink startup script.
+# DIREENTECHOBF4R specific board MAVLink startup script.
 #------------------------------------------------------------------------------
 
 # Start MAVLink on the USB port
